@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class IronConfiguration {
 
     @Bean
+    @ConditionalOnProduction
     public RavenListener ravenListener() {
         return new RavenListener();
     }
